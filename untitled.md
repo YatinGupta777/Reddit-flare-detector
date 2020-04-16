@@ -11,3 +11,7 @@ Used k cross
 
 
 Very less data, and majority of tags overrruling.
+
+Main problems: 
+many reddit posts have only images.
+['Non-poltical'] ,political and coronavirus flare dominating
