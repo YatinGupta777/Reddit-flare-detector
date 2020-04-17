@@ -87,10 +87,6 @@ def result():
     return render_template("index.html",prediction=flare)
 
 #print(request, file=sys.stderr)
-#if txt_file:
- #               filename = secure_filename(txt_file.filename)
-  #              txt_file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-   #             a = 'file uploaded'
     
 @app.route('/automated_testing', methods=['GET','POST'])
 def getfile():
@@ -105,10 +101,8 @@ def getfile():
         for i in links:
             f = FlarePredictor(i)
             res[i] = f[0]
-        
-        print(jsonify(res), file=sys.stderr)
-       # return jsonify(res)
+        return jsonify(res)
     else:
-        return "GET REQ"
+        return "Flares of all the reddit posts whose links are submitted in txt file in POST request will be sent in response as                  JSON here"
         
-    return "Hi"
+    
