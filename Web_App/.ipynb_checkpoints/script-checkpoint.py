@@ -3,7 +3,7 @@ import os
 import numpy as np
 import flask
 import pickle
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for, flash,jsonify
 import praw
 import sys
 import pandas as pd
@@ -13,6 +13,10 @@ from nltk.corpus import stopwords
 import joblib
 import re
 from sklearn.preprocessing import LabelEncoder
+from werkzeug.utils import secure_filename
+from flask import jsonify
+
+
 
 set(stopwords.words('english'))
 ps = PorterStemmer() 
@@ -35,7 +39,12 @@ encoder = LabelEncoder()
 encoder.classes_ = np.load('classes.npy',allow_pickle=True)
 
 #prediction function
-def FlarePredictor(text):
+def FlarePredictor(link):
+    link = link.split("comments")[1]
+    post_id = link.split("/")[1]
+    submission = reddit.submission(id=post_id)
+    text = submission.title + " " + submission.selftext
+    
     cleaned_text = np.array([text])
     cleaned_text = pd.Series(cleaned_text)
     cleaned_text = (cleaned_text.str.lower() #lowercase
@@ -74,9 +83,32 @@ def index():
 @app.route('/index',methods = ['POST'])
 def result():
     link = request.form['text']
-    link = link.split("comments")[1]
-    post_id = link.split("/")[1]
-    submission = reddit.submission(id=post_id)
-    t = submission.title + " " + submission.selftext
-    flare = FlarePredictor(t)
+    flare = FlarePredictor(link)
     return render_template("index.html",prediction=flare)
+
+#print(request, file=sys.stderr)
+#if txt_file:
+ #               filename = secure_filename(txt_file.filename)
+  #              txt_file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+   #             a = 'file uploaded'
+    
+@app.route('/automated_testing', methods=['GET','POST'])
+def getfile():
+    if request.method == 'POST':
+        for file in request.files:
+            links = request.files[file].read()
+            #Since a byte sized object is returned
+            links = [links.decode('utf8').strip()]
+            links = links[0].split("\n")
+        
+        res = dict()
+        for i in links:
+            f = FlarePredictor(i)
+            res[i] = f[0]
+        
+        print(jsonify(res), file=sys.stderr)
+       # return jsonify(res)
+    else:
+        return "GET REQ"
+        
+    return "Hi"
