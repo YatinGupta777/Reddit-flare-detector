@@ -17,7 +17,6 @@ from werkzeug.utils import secure_filename
 from flask import jsonify
 
 
-
 set(stopwords.words('english'))
 ps = PorterStemmer() 
 emoji_pattern = re.compile("["
@@ -40,11 +39,13 @@ encoder.classes_ = np.load('classes.npy',allow_pickle=True)
 
 #prediction function
 def FlarePredictor(link):
+    #Getting the link and splitting it to the post id
     link = link.split("comments")[1]
     post_id = link.split("/")[1]
     submission = reddit.submission(id=post_id)
     text = submission.title + " " + submission.selftext
     
+    # Cleaning the text received
     cleaned_text = np.array([text])
     cleaned_text = pd.Series(cleaned_text)
     cleaned_text = (cleaned_text.str.lower() #lowercase
@@ -53,6 +54,7 @@ def FlarePredictor(link):
                                .str.replace(r'http\S+','') #rem links
                                .str.strip() #rem trailing whitespaces
                                .str.split()) #split by whitespaces
+    
     res = []
     stop_words = set(stopwords.words('english')) 
 
@@ -66,19 +68,17 @@ def FlarePredictor(link):
         res.append(t)
     cleaned_text = res
 
+    #Loading vectorizer,encoder and model
     vectorizer = joblib.load('tfidf.pickle')
     cleaned_text = vectorizer.transform(cleaned_text)
     model = joblib.load('model.pkl')
     prediction= model.predict(cleaned_text)
     return (encoder.inverse_transform(prediction))
 
-#to tell flask what url shoud trigger the function index()
 @app.route('/')
 @app.route('/index')
 def index():
     return flask.render_template('index.html')
-
-#https://www.reddit.com/r/nextfuckinglevel/comments/g289tw/the_needle_galaxy_is_nearly_50_million_lightyears/
 
 @app.route('/index',methods = ['POST'])
 def result():
