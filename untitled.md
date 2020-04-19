@@ -26,3 +26,8 @@ Tuning SVM factors like kernel - rbf,poly
 https://medium.com/all-things-ai/in-depth-parameter-tuning-for-svc-758215394769
 
 changed acc to 27%
+
+
+copying reddit posts from coronavirus predicted as coronavirus
+
+askindia predicted for QA. type posts of other subreddits
