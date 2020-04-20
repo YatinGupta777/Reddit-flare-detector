@@ -79,5 +79,9 @@ Random undersampling to equate data count.
 
 Although the last models have lesser accruacy than part III, these are trained on more data and can predict 11 flare types.
 
+As seen in this confusion matrix, this model performs well except for few flares (room for improvement :) )
+![Confusion matrix](https://github.com/YatinGupta777/Reddit-flare-detector/blob/master/Images/cm3.png?raw=true)
+
+
 Final model used : Naive (Part IV )
 (Accuracies were measured by 30% split between training and test data)
