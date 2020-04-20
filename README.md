@@ -21,7 +21,7 @@ Files info :
 
 All the data was downloaded from subreddit r/india.
 
-Overview of model's accuracies :
+## Overview of model's accuracies :
 
 I. **Data : Top 15 flares , ~1800 Total posts** 
 
