@@ -75,7 +75,9 @@ Random undersampling to equate data count.
 | SVM      | (TBD : Taking long time to train)       |   
 | Random Forest |  52%   |    
 | SGD | 54%     |    
-| Logistic Regression | (TBD : Taking long time to train)  |   
+| Logistic Regression | 50%  |   
 
+Although the last models have lesser accruacy than part III, these are trained on more data and can predict 11 flare types.
 
+Final model used : Naive (Part IV )
 (Accuracies were measured by 30% split between training and test data)
