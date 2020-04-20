@@ -23,7 +23,7 @@ All the data was downloaded from subreddit r/india.
 
 Overview of model's accuracies :
 
-I. **Data : Top 15 flares , ~1800 Total posts ** 
+I. **Data : Top 15 flares , ~1800 Total posts** 
 
 | Model        | Accuracy       | 
 | ------------- |:-------------:| 
@@ -33,7 +33,7 @@ I. **Data : Top 15 flares , ~1800 Total posts **
 | SGD | 54%     |    
 | Logistic Regression | 53%     |    
 
-II. **Data : Top 4 flares , ~1800 Total posts ** 
+II. **Data : Top 4 flares , ~1800 Total posts** 
 
 | Flare        | Posts       | 
 | ------------- |:-------------:| 
