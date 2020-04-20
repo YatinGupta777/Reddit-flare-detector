@@ -8,7 +8,7 @@ Details about the Web App : https://github.com/YatinGupta777/Reddit-Flare-Detect
 Files info : 
 
 1. Flare Detector : Main Code that perform data collection, exploratory data analysis and model building
-2. Experiment Log : Summarizes the various approaches, models, results , data etc.
+2. **Experiment Log : Summarizes the various approaches, models, results , data etc.**
 3. Requirements.txt : Libraires required to run the project
 4. Images : Images used in experiment log
 
@@ -17,5 +17,17 @@ Files info :
 1. Classes.npy : Encoder's details to directly use in Web App
 2. Model.pkl : Best model used in Web App
 3. tfidf.pickly : TfIdf to be used in Web App
+
+Overview of model's accuracies :
+
+I. Data : 15 flares , ~1800 Total posts
+
+| Model        | Accuracy       | 
+| ------------- |:-------------:| 
+| Naive Bayes     | 52% | 
+| SVM      | 56%      |   
+| Random Forest | 55%      |    
+| SGD | 54%     |    
+| Logistic Regression | 53%     |    
 
 
