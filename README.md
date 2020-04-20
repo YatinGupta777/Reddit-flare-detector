@@ -1,6 +1,6 @@
 # Reddit-flare-detector
  
-The best model found here is used in Web App : https://reddit-flare-detector.herokuapp.com/
+The best model found in this repo is used in Web App : https://reddit-flare-detector.herokuapp.com/
 
 Details about the Web App : https://github.com/YatinGupta777/Reddit-Flare-Detector-Web-App
 (A separate Repo to have clean heroku builds, easy to use both the projects if anyone wishes and proper organization)
@@ -8,7 +8,7 @@ Details about the Web App : https://github.com/YatinGupta777/Reddit-Flare-Detect
 Files info : 
 
 1. Flare Detector : Main Code that perform data collection, exploratory data analysis and model building
-2. **Experiment Log : Summarizes the various approaches, models, results , data etc.**
+2. Experiment Log : Summarizes the various approaches, models, results , data etc.**(Detailed Explanation here and in Code)**
 3. Requirements.txt : Libraires required to run the project
 4. Images : Images used in experiment log
 5. Original_expanded_data : 400,000+ Reddit posts analyzed here. This data is downloaded so that it can be directly used again.
@@ -78,6 +78,10 @@ Random undersampling to equate data count.
 | Logistic Regression | 50%  |   
 
 Although the last models have lesser accruacy than part III, these are trained on more data and can predict 11 flare types.
+
+As seen in this confusion matrix, this model performs well except for few flares (room for improvement :) )
+![Confusion matrix](https://github.com/YatinGupta777/Reddit-flare-detector/blob/master/Images/cm3.png?raw=true)
+
 
 Final model used : Naive (Part IV )
 (Accuracies were measured by 30% split between training and test data)
