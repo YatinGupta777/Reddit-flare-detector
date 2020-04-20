@@ -63,8 +63,10 @@ Each flare had 400-500 posts
 | Logistic Regression | 72%     |   
 
 IV. **Data downloaded : (400,000+ posts )**
-Pushshift Api was repeatdly used to gather the data.
+Pushshift Api was repeatedly used to gather the data.
+
 Top 11 flares taken with 3000+ posts.
+
 Random undersampling to equate data count.
 
 | Model        | Accuracy       | 
