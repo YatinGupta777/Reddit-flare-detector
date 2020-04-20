@@ -20,7 +20,7 @@ Files info :
 
 Overview of model's accuracies :
 
-I. Data : 15 flares , ~1800 Total posts
+I. ** Data : Top 15 flares , ~1800 Total posts ** 
 
 | Model        | Accuracy       | 
 | ------------- |:-------------:| 
@@ -30,4 +30,46 @@ I. Data : 15 flares , ~1800 Total posts
 | SGD | 54%     |    
 | Logistic Regression | 53%     |    
 
+II. ** Data : Top 4 flares , ~1800 Total posts ** 
 
+| Flare        | Posts       | 
+| ------------- |:-------------:| 
+| Non Political     | ~500 | 
+| Politics      | ~400     |   
+| Coronavirus | ~400     |    
+| AskIndia | ~150     |    
+
+| Model        | Accuracy       | 
+| ------------- |:-------------:| 
+| Naive Bayes     | 63% | 
+| SVM      | 66%      |   
+| Random Forest | 56%      |    
+| SGD | 66%     |    
+| Logistic Regression | 61%     |   
+
+III. ** Data : Top 4 flares , Over Sampling the data ** 
+
+Each flare had 400-500 posts
+
+| Model        | Accuracy       | 
+| ------------- |:-------------:| 
+| Naive Bayes     | 63% | 
+| SVM      | 75%      |   
+| Random Forest | 71%      |    
+| SGD | 73%     |    
+| Logistic Regression | 72%     |   
+
+IV. ** Data downloaded : (400,000+ posts )**
+Top 11 flares taken with 3000+ posts.
+Random undersampling to equate data count.
+
+| Model        | Accuracy       | 
+| ------------- |:-------------:| 
+| Naive Bayes     | 55% | 
+| SVM      | (TBD : Taking long time to train)       |   
+| Random Forest |  52%   |    
+| SGD | 54%     |    
+| Logistic Regression | (TBD : Taking long time to train)  |   
+
+
+(Accuracies were measured by 30% split between training and test data)
