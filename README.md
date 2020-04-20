@@ -20,7 +20,7 @@ Files info :
 
 Overview of model's accuracies :
 
-I. ** Data : Top 15 flares , ~1800 Total posts ** 
+I. **Data : Top 15 flares , ~1800 Total posts ** 
 
 | Model        | Accuracy       | 
 | ------------- |:-------------:| 
@@ -30,7 +30,7 @@ I. ** Data : Top 15 flares , ~1800 Total posts **
 | SGD | 54%     |    
 | Logistic Regression | 53%     |    
 
-II. ** Data : Top 4 flares , ~1800 Total posts ** 
+II. **Data : Top 4 flares , ~1800 Total posts ** 
 
 | Flare        | Posts       | 
 | ------------- |:-------------:| 
@@ -47,7 +47,7 @@ II. ** Data : Top 4 flares , ~1800 Total posts **
 | SGD | 66%     |    
 | Logistic Regression | 61%     |   
 
-III. ** Data : Top 4 flares , Over Sampling the data ** 
+III. **Data : Top 4 flares , Over Sampling the data** 
 
 Each flare had 400-500 posts
 
@@ -59,7 +59,7 @@ Each flare had 400-500 posts
 | SGD | 73%     |    
 | Logistic Regression | 72%     |   
 
-IV. ** Data downloaded : (400,000+ posts )**
+IV. **Data downloaded : (400,000+ posts )**
 Top 11 flares taken with 3000+ posts.
 Random undersampling to equate data count.
 
