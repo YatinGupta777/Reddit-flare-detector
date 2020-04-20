@@ -11,12 +11,15 @@ Files info :
 2. **Experiment Log : Summarizes the various approaches, models, results , data etc.**
 3. Requirements.txt : Libraires required to run the project
 4. Images : Images used in experiment log
+5. Original_expanded_data : 400,000+ Reddit posts analyzed here. This data is downloaded so that it can be directly used again.
 
-[These 3 files can be directly downloaded to us in an application if required]
+[These 3 files can be directly downloaded to use in an application if required]
 
 1. Classes.npy : Encoder's details to directly use in Web App
 2. Model.pkl : Best model used in Web App
 3. tfidf.pickly : TfIdf to be used in Web App
+
+All the data was downloaded from subreddit r/india.
 
 Overview of model's accuracies :
 
@@ -60,6 +63,7 @@ Each flare had 400-500 posts
 | Logistic Regression | 72%     |   
 
 IV. **Data downloaded : (400,000+ posts )**
+Pushshift Api was repeatdly used to gather the data.
 Top 11 flares taken with 3000+ posts.
 Random undersampling to equate data count.
 
