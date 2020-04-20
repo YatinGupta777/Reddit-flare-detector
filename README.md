@@ -8,7 +8,7 @@ Details about the Web App : https://github.com/YatinGupta777/Reddit-Flare-Detect
 Files info : 
 
 1. Flare Detector : Main Code that perform data collection, exploratory data analysis and model building
-2. **Experiment Log : Summarizes the various approaches, models, results , data etc.**
+2. **Experiment Log : Summarizes the various approaches, models, results , data etc.** (Detailed Explanation here and in Code)
 3. Requirements.txt : Libraires required to run the project
 4. Images : Images used in experiment log
 5. Original_expanded_data : 400,000+ Reddit posts analyzed here. This data is downloaded so that it can be directly used again.
