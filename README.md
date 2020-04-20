@@ -1,6 +1,7 @@
 # Reddit-flare-detector
  
 The best model found here is used in Web App : https://reddit-flare-detector.herokuapp.com/
+
 Details about the Web App : https://github.com/YatinGupta777/Reddit-Flare-Detector-Web-App
 
 Files info : 
