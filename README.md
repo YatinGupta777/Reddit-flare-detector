@@ -3,7 +3,7 @@
 The best model found in this repo is used in Web App : https://reddit-flare-detector.herokuapp.com/
 
 Details about the Web App : https://github.com/YatinGupta777/Reddit-Flare-Detector-Web-App
-(A separate Repo to have clean heroku builds, easy to use both the projects if anyone wishes and proper organization)
+(A separate Repo to have clean heroku builds, easy to use both the projects and proper organization)
 
 Files info : 
 
@@ -11,17 +11,54 @@ Files info :
 2. Experiment Log : Summarizes the various approaches, models, results , data etc.**(Detailed Explanation here and in Code)**
 3. Requirements.txt : Libraires required to run the project
 4. Images : Images used in experiment log
-5. Original_expanded_data : 400,000+ Reddit posts analyzed here. This data is downloaded so that it can be directly used again.
 
-[These 3 files can be directly downloaded to use in an application if required]
+[These 4 files can be directly downloaded to use in an application if required]
 
 1. Classes.npy : Encoder's details to directly use in Web App
 2. Model.pkl : Best model used in Web App
 3. tfidf.pickly : TfIdf to be used in Web App
+4. Original_expanded_data : 400,000+ Reddit posts analyzed here. This data is downloaded so that it can be directly used again.
 
 All the data was downloaded from subreddit r/india.
 
-## Overview of model's accuracies :
+# Installation
+
+Dependencies are mentioned in requirements.txt
+
+Clone the repo
+
+```
+git clone https://github.com/YatinGupta777/Reddit-flare-detector.git
+cd Reddit-Flair-Detection/
+```
+Run
+```
+pip install -r requirements
+```
+# Approach
+
+After reading about the various text processing technique and text classification algorithms, Naive-Bayes, SVM, Random Forect, SGD, and Logistic Regression algorithms were used.
+
+#### General points
+1. Only title and body of post's are used to train.
+
+#### Divided into 4 sections :
+
+Section 1, 2, 3 : Data collected using praw. Collecting 1000 top, new and hot posts and after duplicate removal around ~2k posts remained.
+
+Section 1: Target had flares with greater than 3 posts.
+
+Section 2: Target had flares with greater than 100 posts.
+
+Section 3: Data collected above is oversampled.
+
+4. Section 4: 
+  * 400,000+ posts downloaded. 
+  * Flares with greater than 3000 posts taken. 
+  * Data is undersampled. 
+  * Final Data had 11 flares, with each around ~3K posts.
+
+# Overview of model's accuracies :
 
 I. **Data : Top 15 flares , ~1800 Total posts** 
 
