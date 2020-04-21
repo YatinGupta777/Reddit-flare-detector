@@ -3,7 +3,7 @@
 The best model found in this repo is used in Web App : https://reddit-flare-detector.herokuapp.com/
 
 Details about the Web App : https://github.com/YatinGupta777/Reddit-Flare-Detector-Web-App
-(A separate Repo to have clean heroku builds, easy to use both the projects if anyone wishes and proper organization)
+(A separate Repo to have clean heroku builds, easy to use both the projects and proper organization)
 
 Files info : 
 
