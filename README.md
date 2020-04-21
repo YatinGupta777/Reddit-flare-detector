@@ -71,9 +71,9 @@ Random undersampling to equate data count.
 
 | Model        | Accuracy       | 
 | ------------- |:-------------:| 
-| Naive Bayes     | 55% | 
-| SVM      | (TBD : Taking long time to train)       |   
-| Random Forest |  52%   |    
+| Naive Bayes     | 53% | 
+| SVM      | 54%      |   
+| Random Forest |  53%   |    
 | SGD | 54%     |    
 | Logistic Regression | 50%  |   
 
@@ -83,5 +83,5 @@ As seen in this confusion matrix, this model performs well except for few flares
 ![Confusion matrix](https://github.com/YatinGupta777/Reddit-flare-detector/blob/master/Images/cm3.png?raw=true)
 
 
-Final model used : Naive (Part IV )
+Final model used : SVM (Part IV )
 (Accuracies were measured by 30% split between training and test data)
