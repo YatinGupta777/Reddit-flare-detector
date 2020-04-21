@@ -46,9 +46,11 @@ After reading about the various text processing technique and text classificatio
 
 Section 1, 2, 3 : Data collected using praw. Collecting 1000 top, new and hot posts and after duplicate removal around ~2k posts remained.
 
-1. Section 1: Target had flares with greater than 3 posts.
-2. Section 2: Target had flares with greater than 100 posts.
-3. Section 3: Data collected above is oversampled.
+Section 1: Target had flares with greater than 3 posts.
+
+Section 2: Target had flares with greater than 100 posts.
+
+Section 3: Data collected above is oversampled.
 
 4. Section 4: 
   * 400,000+ posts downloaded. 
