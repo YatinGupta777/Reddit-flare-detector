@@ -51,9 +51,9 @@ Section 1: Target had flares with greater than 3 posts.
 
 Section 2: Target had flares with greater than 100 posts.
 
-Section 3: Data collected above is oversampled.
+Section 3: Data collected above in section 3 is oversampled.
 
-4. Section 4: 
+Section 4: 
   * 400,000+ posts downloaded. 
   * Flares with greater than 3000 posts taken. 
   * Data is undersampled. 
