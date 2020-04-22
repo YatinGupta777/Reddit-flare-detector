@@ -93,11 +93,11 @@ Each flare had 400-500 posts
 
 | Model        | Accuracy       | 
 | ------------- |:-------------:| 
-| Naive Bayes     | 63% | 
-| SVM      | 75%      |   
+| Naive Bayes     | 60% | 
+| SVM      | 78%      |   
 | Random Forest | 71%      |    
-| SGD | 73%     |    
-| Logistic Regression | 72%     |   
+| SGD | 77%     |    
+| Logistic Regression | 77%     |   
 
 IV. **Data downloaded : (400,000+ posts )**
 Pushshift Api was repeatedly used to gather the data.
