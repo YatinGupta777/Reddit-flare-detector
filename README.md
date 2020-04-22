@@ -40,7 +40,8 @@ pip install -r requirements
 After reading about the various text processing technique and text classification algorithms, Naive-Bayes, SVM, Random Forect, SGD, and Logistic Regression algorithms were used.
 
 #### General points
-1. Only title and body of post's are used to train.
+1. Only title and body of posts are used to train the models.
+2. Comments seem irrelevant since flares are supposed to be describing the post
 
 #### Divided into 4 sections :
 
@@ -50,9 +51,9 @@ Section 1: Target had flares with greater than 3 posts.
 
 Section 2: Target had flares with greater than 100 posts.
 
-Section 3: Data collected above is oversampled.
+Section 3: Data collected above in section 3 is oversampled.
 
-4. Section 4: 
+Section 4: 
   * 400,000+ posts downloaded. 
   * Flares with greater than 3000 posts taken. 
   * Data is undersampled. 
@@ -93,11 +94,11 @@ Each flare had 400-500 posts
 
 | Model        | Accuracy       | 
 | ------------- |:-------------:| 
-| Naive Bayes     | 63% | 
-| SVM      | 75%      |   
+| Naive Bayes     | 60% | 
+| SVM      | 78%      |   
 | Random Forest | 71%      |    
-| SGD | 73%     |    
-| Logistic Regression | 72%     |   
+| SGD | 77%     |    
+| Logistic Regression | 77%     |   
 
 IV. **Data downloaded : (400,000+ posts )**
 Pushshift Api was repeatedly used to gather the data.
@@ -121,4 +122,5 @@ As seen in this confusion matrix, this model performs well except for few flares
 
 
 Final model used : SVM (Part IV )
+
 (Accuracies were measured by 30% split between training and test data)
