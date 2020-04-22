@@ -40,7 +40,8 @@ pip install -r requirements
 After reading about the various text processing technique and text classification algorithms, Naive-Bayes, SVM, Random Forect, SGD, and Logistic Regression algorithms were used.
 
 #### General points
-1. Only title and body of post's are used to train.
+1. Only title and body of posts are used to train the models.
+2. Comments seem irrelevant since flares are supposed to be describing the post
 
 #### Divided into 4 sections :
 
