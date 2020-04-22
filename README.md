@@ -122,4 +122,5 @@ As seen in this confusion matrix, this model performs well except for few flares
 
 
 Final model used : SVM (Part IV )
+
 (Accuracies were measured by 30% split between training and test data)
